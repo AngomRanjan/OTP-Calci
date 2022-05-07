@@ -4,3 +4,23 @@
 
 
 /* || Typography */
+
+.wrapper {
+  width: 60%;
+  height: 75vh;
+  display: flex;
+  background-color: blue;
+  flex-wrap: wrap;
+}
+
+.cells {
+  width: 24%;
+  height: 10vh;
+  border: 1px solid gray;
+}
+
+#cell-1 {
+  width: 100%;
+  height: 15vh;
+  background-color: #fff;
+}
