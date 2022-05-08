@@ -21,7 +21,7 @@ function operate(num1,num2,operator){
 }
 
 function populate(num,s) {
-  display.textContent=display.textContent + num;
+  (Number(display.textContent)===0) ? display.textContent=num:display.textContent=display.textContent + num;
 }
 
 const n1=6;
