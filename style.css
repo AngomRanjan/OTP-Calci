@@ -2,7 +2,6 @@
 
 /* || General styles */
 
-
 /* || Typography */
 
 .wrapper {
@@ -11,6 +10,8 @@
   display: flex;
   background-color: blue;
   flex-wrap: wrap;
+  margin: auto;
+  vertical-align: middle;
 }
 
 .cells {
@@ -19,7 +20,7 @@
   border: 1px solid gray;
 }
 
-#cell-1 {
+#display {
   width: 100%;
   height: 15vh;
   background-color: #fff;
