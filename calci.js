@@ -20,12 +20,24 @@ function operate(num1,num2,operator){
   display.textContent= operator (num1,num2);
 }
 
+function populate(num,s) {
+  display.textContent=display.textContent + num;
+}
+
 const n1=6;
 const n2=0;
 const display=document.getElementById('display');
-//console.log(operate(n1,n2,divide));
 
 document.getElementById('multiply').addEventListener('click', function(){operate(n1,n2,multiply);});
 document.getElementById('divide').addEventListener('click', function(){operate(n1,n2,divide);});
 document.getElementById('add').addEventListener('click', function(){operate(n1,n2,add);});
 document.getElementById('subtract').addEventListener('click', function(){operate(n1,n2,subtract);});
+
+let tempArray = document.querySelectorAll(".numKeys");
+
+tempArray.forEach(function(numKeys) {
+  var a=this.id;
+    numKeys.addEventListener("click", function() {
+        populate(numKeys.id,0)
+    });
+});
