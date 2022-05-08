@@ -17,9 +17,15 @@ function multiply(num1,num2) {
 }
 
 function operate(num1,num2,operator){
-  return operator (num1,num2);
+  display.textContent= operator (num1,num2);
 }
 
-const num1=6;
-const num2=0;
-console.log(operate(num1,num2,divide));
+const n1=6;
+const n2=0;
+const display=document.getElementById('display');
+//console.log(operate(n1,n2,divide));
+
+document.getElementById('multiply').addEventListener('click', function(){operate(n1,n2,multiply);});
+document.getElementById('divide').addEventListener('click', function(){operate(n1,n2,divide);});
+document.getElementById('add').addEventListener('click', function(){operate(n1,n2,add);});
+document.getElementById('subtract').addEventListener('click', function(){operate(n1,n2,subtract);});
