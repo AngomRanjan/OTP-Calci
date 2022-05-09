@@ -26,13 +26,19 @@ function operate(num1,num2,operator){
     display.textContent=n1;
     n2="";
   }
-
   curOps=operator;
-  keyMode='ops'
+
+  boolDecimal=false;
+
+  (operator==='equal') ? keyMode='number1':keyMode='ops';
   //display.textContent= operator (num1,num2);
 }
 
 function populate(num,s) {
+  if (curOps==='equal') {
+    display.textContent='0';
+    curOps='';
+  }
   if (keyMode==='ops') {
     boolDecimal=false;
     keyMode='number2';
@@ -46,7 +52,7 @@ function populate(num,s) {
     (Number(display.textContent)===0 && boolDecimal===false) ? display.textContent=num:display.textContent+=num;
 }
 
-let n1=6;
+let n1=0;
 let n2=2;
 const display=document.getElementById('display');
 let boolDecimal=false;

@@ -18,6 +18,13 @@ button {
   width: 24%;
   height: 10vh;
   border: 1px solid gray;
+  animation: all 0.5s;
+}
+
+button:active {
+  font-size: larger;
+  font-weight: bold;
+  background-color: #fff;
 }
 
 #display {
