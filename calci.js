@@ -17,6 +17,7 @@ function multiply(num1,num2) {
 }
 
 function operate(num1,num2,operator){
+  alert("you click"+" '"+operator.name+"'");
   display.textContent= operator (num1,num2);
 }
 
@@ -25,19 +26,13 @@ function populate(num,s) {
 }
 
 const n1=6;
-const n2=0;
+const n2=2;
 const display=document.getElementById('display');
 
-document.getElementById('multiply').addEventListener('click', function(){operate(n1,n2,multiply);});
-document.getElementById('divide').addEventListener('click', function(){operate(n1,n2,divide);});
-document.getElementById('add').addEventListener('click', function(){operate(n1,n2,add);});
-document.getElementById('subtract').addEventListener('click', function(){operate(n1,n2,subtract);});
-
-let tempArray = document.querySelectorAll(".numKeys");
+let tempArray = document.querySelectorAll("button");
 
 tempArray.forEach(function(numKeys) {
-  var a=this.id;
     numKeys.addEventListener("click", function() {
-        populate(numKeys.id,0)
+        (numKeys.className==="numKeys") ? populate(numKeys.id,0):operate(n1,n2,window[numKeys.id]);
     });
 });
