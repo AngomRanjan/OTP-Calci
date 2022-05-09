@@ -21,7 +21,8 @@ function clear() {
   curOps='';
   n1='';
   n2='';
-  keyMode='number1'
+  keyMode='number1';
+  boolDecimal=false;
 }
 
 function operate(num1,num2,operator){
