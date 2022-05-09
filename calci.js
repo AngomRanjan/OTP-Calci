@@ -16,22 +16,39 @@ function multiply(num1,num2) {
   return num1*num2;
 }
 
+function clear() {
+  display.textContent='0';
+  curOps='';
+  n1='';
+  n2='';
+  keyMode='number1'
+}
+
 function operate(num1,num2,operator){
-  if(keyMode==="number1") {
-    n1=Number(display.textContent);
-  }
-  else if (keyMode==="number2") {
-    n2=Number(display.textContent);
-    n1= window[curOps] (n1,n2);
-    display.textContent=n1;
-    n2="";
-  }
-  curOps=operator;
 
-  boolDecimal=false;
+  switch (operator) {
+    case 'clear':
+      clear();
+      break;
 
-  (operator==='equal') ? keyMode='number1':keyMode='ops';
-  //display.textContent= operator (num1,num2);
+    case 'backspace':
+      break;
+
+    default:
+      if(keyMode==="number1") {
+        n1=Number(display.textContent);
+      }
+      else if (keyMode==="number2") {
+        n2=Number(display.textContent);
+        n1= window[curOps] (n1,n2);
+        display.textContent=n1;
+        n2="";
+      }
+      curOps=operator;
+      boolDecimal=false;
+      (operator==='equal') ? keyMode='number1':keyMode='ops';
+
+  }
 }
 
 function populate(num,s) {
