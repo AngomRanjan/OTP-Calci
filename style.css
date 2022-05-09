@@ -9,9 +9,12 @@
   background-color: blue;
   flex-wrap: wrap;
   margin: auto;
+  border: 1px solid #000;
+  justify-content: space-between;
+  padding: 3px;
 }
 
-.cells {
+button {
   width: 24%;
   height: 10vh;
   border: 1px solid gray;
