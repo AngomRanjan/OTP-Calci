@@ -25,6 +25,11 @@ function clear() {
   boolDecimal=false;
 }
 
+function backspace(text){
+  (text.length===1) ? display.textContent='0':display.textContent=text.substring(0,text.length-1);
+  (display.textContent.indexOf('.')<1) ? boolDecimal=false:boolDecimal=true;
+}
+
 function operate(num1,num2,operator){
 
   switch (operator) {
@@ -33,6 +38,7 @@ function operate(num1,num2,operator){
       break;
 
     case 'backspace':
+      backspace(display.textContent)
       break;
 
     default:
@@ -52,7 +58,7 @@ function operate(num1,num2,operator){
   }
 }
 
-function populate(num,s) {
+function populate(num) {
   if (curOps==='equal') {
     display.textContent='0';
     curOps='';
