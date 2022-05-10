@@ -48,6 +48,9 @@ function operate(num1,num2,operator){
     case 'percent':
       display.textContent=percent(display.textContent)
       break;
+    case 'close':
+      close();
+      break;
 
     default:
       if(keyMode==="number1") {
