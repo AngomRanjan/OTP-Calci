@@ -8,12 +8,16 @@ function subtract(num1,num2) {
 
 function divide(num1,num2) {
   var x;
-  (num2===0) ? x="error": x=num1/num2;
+  (num2===0) ? x="error division by 0": x=num1/num2;
   return x;
 }
 
 function multiply(num1,num2) {
   return num1*num2;
+}
+
+function percent(text) {
+  return Number(text)*0.01;
 }
 
 function clear() {
@@ -39,6 +43,10 @@ function operate(num1,num2,operator){
 
     case 'backspace':
       backspace(display.textContent)
+      break;
+
+    case 'percent':
+      display.textContent=percent(display.textContent)
       break;
 
     default:
