@@ -1,10 +1,6 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+!# Profile
 
-# Profile
-
-> This project is a part of here goes project description
-
-
+> This project is a part of The Odin Project Foundation
 
 ## Built With
 
@@ -16,9 +12,9 @@
 Open Terminal change to root folder of the project :
 
 - To Install type the following commands
-  - sudo npm install -g lighthouse
-  - sudo npm install --save-dev hint@6.x
-  - sudo npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+  - npm install -g lighthouse
+  - npm install --save-dev hint@6.x
+  - npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
 
 - To Run Linters Checks :
   - lighthouse <url>
@@ -45,11 +41,11 @@ Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a [⭐️](../../stargazers) if you like this project!
 
 ## Acknowledgments
 
-- Microverse Team
+- The Odin Project Team
 - My Family
 
 ## 📝 License
