@@ -50,4 +50,4 @@ Give a [⭐️](../../stargazers) if you like this project!
 
 ## 📝 License
 
-This project is ANGOM licensed.
+This project is [MIT](LICENSE) licensed.
